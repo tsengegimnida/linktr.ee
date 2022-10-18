@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
+
 const mongoose = require("mongoose");
-const UserModel = require("./models/Users");
+const UserModel = require("./models/User");
+const LinkModel = require("./models/Link");
 
 const cors = require("cors");
 
@@ -9,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 mongoose.connect(
-  "mongodb+srv://user123:Password123Tech@cluster0.j7fql.mongodb.net/merntutorial?retryWrites=true&w=majority"
+  "mongodb+srv://tsengeg:Hw1E9hyIyGChjZUG@cluster0.ocgyx.mongodb.net/?retryWrites=true&w=majority"
 );
 
 app.get("/getUsers", (req, res) => {
